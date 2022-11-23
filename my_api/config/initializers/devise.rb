@@ -26,6 +26,11 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  config.omniauth :azure_activedirectory_v2,
+    client_id:     '5f2b4cda-d9c9-4860-ae59-29116f9c0381'                                                              
+    client_secret: Rails.application.credentials[:azure_client_secret],                                                         
+    tenant_id:     '6f2e4b06-ace2-4aff-a9a4-44102954263b'
+
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
